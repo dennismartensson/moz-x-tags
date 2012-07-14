@@ -33,7 +33,10 @@
 			
 			if (toSelected) {
 				var selected = slides.querySelector('[selected="true"]');
-				if (selected) slide(this, children.indexOf(selected) || 0);
+				if (selected) {
+					slides.style[xtag.prefix.js + 'TransitionDuration'] = '0.00000000000001s';
+					slide(this, children.indexOf(selected) || 0);
+				}
 			}
 		};
 
