@@ -36,6 +36,7 @@
 			if (toSelected) {
 				var selected = slides.querySelector('[selected="true"]');
 				if (selected) {
+					//Setting the TransitionDuration to this low number fixes the flicker.
 					slides.style[xtag.prefix.js + 'TransitionDuration'] = '0.00000000000001s';
 					slide(this, children.indexOf(selected) || 0);
 				}
